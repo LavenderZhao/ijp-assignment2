@@ -11,7 +11,7 @@
       <ImageView fx:id="basketView" fitHeight="83.0" fitWidth="99.0" layoutX="333.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="pickButton" layoutX="120.0" layoutY="14.0" mnemonicParsing="false" onAction="#pickButton" text="pick" />
       <Button fx:id="putButton" layoutX="30.0" layoutY="14.0" mnemonicParsing="false" onAction="#putButton" text="put" />
-      <ImageView fx:id="mapView" fitHeight="150.0" fitWidth="150.0" layoutX="432.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="mapView" fitHeight="150.0" fitWidth="150.0" layoutX="448.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="item1View" fitHeight="56.0" fitWidth="63.0" layoutX="448.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true" />
       <Label layoutX="449.0" layoutY="210.0" text="item" />
       <ImageView fx:id="item2View" fitHeight="56.0" fitWidth="63.0" layoutX="448.0" layoutY="287.0" pickOnBounds="true" preserveRatio="true" />
@@ -19,5 +19,6 @@
       <Button fx:id="rightButton" layoutX="286.0" layoutY="318.0" mnemonicParsing="false" text="Button" />
       <Button fx:id="leftButton" layoutX="120.0" layoutY="318.0" mnemonicParsing="false" text="Button" />
       <Button fx:id="forwardButton" layoutX="204.0" layoutY="293.0" mnemonicParsing="false" text="Button" />
+      <Label layoutX="446.0" layoutY="28.0" text="map" />
    </children>
 </AnchorPane>

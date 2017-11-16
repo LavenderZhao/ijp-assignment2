@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WorldController">
+   <children>
+      <ImageView fx:id="imageView" fitHeight="384.0" fitWidth="512.0" layoutX="6.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="120.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="86.0" />
+      <ImageView fx:id="insideView1" fitHeight="64.0" fitWidth="64.0" layoutX="398.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="insideView2" fitHeight="64.0" fitWidth="64.0" layoutX="398.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="22.0" layoutY="453.0" text="item" />
+      <ImageView fx:id="item2View" fitHeight="64.0" fitWidth="64.0" layoutX="185.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="item1View" fitHeight="64.0" fitWidth="64.0" layoutX="87.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="rightButton" layoutX="368.0" layoutY="369.0" mnemonicParsing="false" onAction="#rightButton" text="▶︎" />
+      <Button fx:id="leftButton" layoutX="170.0" layoutY="369.0" mnemonicParsing="false" onAction="#leftButton" text="◀︎" />
+      <Button fx:id="forwardButton" layoutX="266.0" layoutY="313.0" mnemonicParsing="false" onAction="#forwardButton" text="▲" />
+      <Label fx:id="locationLable" layoutX="32.0" layoutY="57.0" text="Label" />
+      <MenuBar fx:id="itemMnue" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu fx:id="pickMnue" mnemonicParsing="false" text="pick">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="putMnue" mnemonicParsing="false" text="put">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

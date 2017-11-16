@@ -1,3 +1,4 @@
+package model;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,17 +22,18 @@ public class Item {
         basketView.setVisible(true);
         item1View.setVisible(false);
         itemNum--;
+        
 	}
 	
 	public void pickItem() {
-		basketView.setVisible(true);
+		basketView.setVisible(false);
 		if (itemNum == 0) {
 			item1View.setImage(basket);                
-	        item1View.setVisible(false);
+	        item1View.setVisible(true);
 	        itemNum++;
 		} else {
 			item2View.setImage(basket);                
-	        item2View.setVisible(false);
+	        item2View.setVisible(true);
 		}
 		
 	}
