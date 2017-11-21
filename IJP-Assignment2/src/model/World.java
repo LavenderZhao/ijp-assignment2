@@ -5,7 +5,7 @@ import java.net.URL;
 import javafx.scene.image.Image;
 
 /**
- * This class is used to initialise all the location and item
+ * Initialises all the location and item
  * @author xueqi zhao
  * @version 3.2
  */
@@ -15,7 +15,7 @@ public class World {
 	private Location currentLocation;
 	
 	//create locations
-	private Location  location1, location6, location2, location3, location5, location7;
+	private Location  location1, location5, location2, location3, location4, location6;
 	
 	/**
 	 * Return current location
@@ -30,38 +30,31 @@ public class World {
 	 */
 	public void createLocation() {
 		
-		
+		//initialize locations with name
 		location1 = new Location("corridor1");
-		location6 = new Location("corridor2");
-		location7 = new Location("corridor3");
+		location5 = new Location("corridor2");
+		location6 = new Location("corridor3");
 		location2 = new Location("room407");
 		location3 = new Location("room409");
-		location5 = new Location("room412");
+		location4 = new Location("room412");
 		
-		
-		
-		//Image location3_1 = new Image("Location3_2.jpg");
-
-		
-		location1 = new Location("corridor1");
-		
-		
-		// put image into hashmap
-		
+		//initialize each location
 		createLocation1();
 		createLocation2();
 		createLocation3();
-		createLocation5();
-		createLocation6();
-		createLocation7();
+		createlocation4();
+		createlocation5();
+		createlocation6();
 		
 		
 		//Initialize the current location.
 		currentLocation = location1;
 
 	}
+	
 	public void createLocation1() {
 		
+		//initialize images of each direction
 		URL url1 = this.getClass().getResource("/resources/1_1.jpg");
 		URL url2 = this.getClass().getResource("/resources/1_2.jpg");
 		URL url3 = this.getClass().getResource("/resources/1_3.jpg");
@@ -71,36 +64,37 @@ public class World {
 		Image location113 = new Image(url3.toString());
 		Image location114 = new Image(url4.toString());
 		
+		// put image into hashmap
 		location1.setImageMap("north", location111);
 		location1.setImageMap("east", location112);
 		location1.setImageMap("south", location113);
 		location1.setImageMap("west", location114);
 		
-		
+		//put next location into hashmap
 		location1.setNextMap("east", location2);
-		location1.setNextMap("north", location6);	
+		location1.setNextMap("north", location5);	
 		
 	}
-	public void createLocation6() {
+	public void createlocation5() {
 		
-		URL url1 = this.getClass().getResource("/resources/6_1.jpg");
-		URL url2 = this.getClass().getResource("/resources/6_2.jpg");
-		URL url3 = this.getClass().getResource("/resources/6_3.jpg");
-		URL url4 = this.getClass().getResource("/resources/6_4.jpg");
+		URL url1 = this.getClass().getResource("/resources/5_1.jpg");
+		URL url2 = this.getClass().getResource("/resources/5_2.jpg");
+		URL url3 = this.getClass().getResource("/resources/5_3.jpg");
+		URL url4 = this.getClass().getResource("/resources/5_4.jpg");
 		Image location121 = new Image(url1.toString());
 		Image location122 = new Image(url2.toString());
 		Image location123 = new Image(url3.toString());
 		Image location124 = new Image(url4.toString());
 		
 		
-		location6.setImageMap("north", location121);
-		location6.setImageMap("east", location122);
-		location6.setImageMap("south", location123);
-		location6.setImageMap("west", location124);
+		location5.setImageMap("north", location121);
+		location5.setImageMap("east", location122);
+		location5.setImageMap("south", location123);
+		location5.setImageMap("west", location124);
 		
-		location6.setNextMap("south", location1);	
-		location6.setNextMap("east", location3);
-		location6.setNextMap("west", location7);
+		location5.setNextMap("south", location1);	
+		location5.setNextMap("east", location3);
+		location5.setNextMap("west", location6);
 	}
 	public void createLocation2() {
 		
@@ -138,49 +132,54 @@ public class World {
 		location3.setImageMap("south", location33);
 		location3.setImageMap("west", location34);
 		
-		location3.setNextMap("west", location6);
+		location3.setNextMap("west", location5);
 	}
 	
-	public void createLocation5() {
+	public void createlocation4() {
 		
 		
-		URL url1 = this.getClass().getResource("/resources/5_1.jpg");
-		URL url2 = this.getClass().getResource("/resources/5_2.jpg");
-		URL url3 = this.getClass().getResource("/resources/5_3.jpg");
-		URL url4 = this.getClass().getResource("/resources/5_4.jpg");
-		Image location51 = new Image(url1.toString());
-		Image location52 = new Image(url2.toString());
-		Image location53 = new Image(url3.toString());
-		Image location54 = new Image(url4.toString());
+		URL url1 = this.getClass().getResource("/resources/4_1.jpg");
+		URL url2 = this.getClass().getResource("/resources/4_2.jpg");
+		URL url3 = this.getClass().getResource("/resources/4_3.jpg");
+		URL url4 = this.getClass().getResource("/resources/4_4.jpg");
+		Image location41 = new Image(url1.toString());
+		Image location42 = new Image(url2.toString());
+		Image location43 = new Image(url3.toString());
+		Image location44 = new Image(url4.toString());
 		
-		location5.setImageMap("north", location51);
-		location5.setImageMap("east", location52);
-		location5.setImageMap("south", location53);
-		location5.setImageMap("west", location54);
+		location4.setImageMap("north", location41);
+		location4.setImageMap("east", location42);
+		location4.setImageMap("south", location43);
+		location4.setImageMap("west", location44);
 		
-		location5.setNextMap("north", location7);
+		location4.setNextMap("north", location6);
 	}
 	
-	public void createLocation7() {
+	public void createlocation6() {
 		
 		
-		URL url1 = this.getClass().getResource("/resources/7_1.jpg");
-		URL url2 = this.getClass().getResource("/resources/7_2.jpg");
-		URL url3 = this.getClass().getResource("/resources/7_3.jpg");
-		URL url4 = this.getClass().getResource("/resources/7_4.jpg");
-		Image location71 = new Image(url1.toString());
-		Image location72 = new Image(url2.toString());
-		Image location73 = new Image(url3.toString());
-		Image location74 = new Image(url4.toString());
+		URL url1 = this.getClass().getResource("/resources/6_1.jpg");
+		URL url2 = this.getClass().getResource("/resources/6_2.jpg");
+		URL url3 = this.getClass().getResource("/resources/6_3.jpg");
+		URL url4 = this.getClass().getResource("/resources/6_4.jpg");
+		Image location61 = new Image(url1.toString());
+		Image location62 = new Image(url2.toString());
+		Image location63 = new Image(url3.toString());
+		Image location64 = new Image(url4.toString());
 		
-		location7.setImageMap("north", location71);
-		location7.setImageMap("east", location72);
-		location7.setImageMap("south", location73);
-		location7.setImageMap("west", location74);
+		location6.setImageMap("north", location61);
+		location6.setImageMap("east", location62);
+		location6.setImageMap("south", location63);
+		location6.setImageMap("west", location64);
 		
-		location7.setNextMap("south", location5);	
-		location7.setNextMap("east", location6);
+		location6.setNextMap("south", location4);	
+		location6.setNextMap("east", location5);
 	}
+	
+	/**
+	 * initialize items.
+	 * create items and put them in initial location
+	 */
 	public void createItem() {
 		
 		URL url1 = this.getClass().getResource("/resources/house.png");

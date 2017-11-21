@@ -6,33 +6,45 @@ import javafx.scene.image.Image;
 
 public class Location {
 
+	//storage loation name
 	private String locationName;
 
+	//storage item in this location
 	private HashMap<String, Item> ItemMap = new HashMap<String, Item>();
 
-	private HashMap<String, Location> NextMap = new HashMap<>(); // store locations
-	private HashMap<String, Image> ImageMap = new HashMap<>(); // store images
+	//storage next location with direction
+	private HashMap<String, Location> NextMap = new HashMap<>(); 
+	//storage image of each direction
+	private HashMap<String, Image> ImageMap = new HashMap<>(); 
 
+	/**
+	 * Return item's hashmap
+	 * @return itemmap
+	 */
 	public HashMap<String, Item> getItemMap() {
-		// System.out.println(ImageMap);
 		return ItemMap;
 	}
-
-	public Location() {
-		// TODO Auto-generated constructor stub
-		// this.locationName = "door";
-	}
-
+	/**
+	 * initial the location with location name
+	 * @param locationName
+	 */
 	public Location(String locationName) {
 		this.locationName = locationName;
 
 	}
 
-
+	/**
+	 * gets location name
+	 * @return locationName
+	 */
 	public String getlocationName() {
 		return locationName;
 	}
 
+	/**
+	 * 
+	 * @param locationName
+	 */
 	public void setlocationName(String locationName) {
 		this.locationName = locationName;
 	}

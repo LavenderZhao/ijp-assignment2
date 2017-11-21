@@ -17,7 +17,7 @@ import model.Location;
 import model.World;
 
 /**
- * This class contain all the 
+ * This class contain all the actions of buttons and start of the application
  * @author xueqi zhao
  * @version 5.2
  */
@@ -70,7 +70,7 @@ public class WorldController {
 
 	// create the direction object
 	private Direction direction = new Direction();
-	Item item1 = new Item("basket");
+	Item item1 = new Item("house");
 	Item item2 = new Item("chocolate");
 
 	/**
@@ -230,6 +230,9 @@ public class WorldController {
 		}
 	}
 
+	/**
+	 * dispaly all the items in this location and set visible of buttons
+	 */
 	public void displayImage() {
 
 		// Integer itemNumber = currentLocation.getItemNumber();
